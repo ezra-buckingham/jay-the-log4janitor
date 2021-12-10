@@ -9,7 +9,7 @@ def main():
   parser.add_argument('-ri', '--remoteip', dest='remote_ip',help='remote system IP to get the requests back for successful exploitation')
   parser.add_argument('-rp', '--remoteport', dest='remote_port', type=int, help='remote system port to get the requests back for successful exploitation')
   parser.add_argument('-l', '--endpointlist', dest='endpoint_list',help='List of the potential endpoints that exist at the target')
-  parser.add_argument('-o', '--output', dest='output_file',help='File to write logging out to')
+  parser.add_argument('-o', '--output', default="log4j_scanner.output",dest='output_file',help='File to write logging out to')
 
   args = parser.parse_args()
 
