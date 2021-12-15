@@ -45,7 +45,7 @@ def main():
     except Exception as e:
       log_error(f'Some Exception Occured: {e}')
   except Exception as e:
-    log_error('Some Exception Occured: {e}')
+    log_error(f'Some Exception Occured: {e}')
 
 def log_info(message):
   print(f'[*] {message}')
