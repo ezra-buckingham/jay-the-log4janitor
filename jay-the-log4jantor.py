@@ -24,7 +24,7 @@ def main():
 
   query = args.query
 
-  logging.info(f'Getting payload for {query}')
+  log_info(f'Getting payload for {query}')
   try:
     basedn = "dc=scan"
     scope = ldap.SCOPE_SUBTREE
@@ -33,7 +33,7 @@ def main():
 
     # Parse the response 
     http_endpoint = f'{(response[0][1]["javaCodeBase"][0]).decode("utf-8") }{(response[0][1]["javaFactory"][0]).decode("utf-8") }.class'
-    logging.info(f'Found redirection to {http_endpoint}')
+    log_info(f'Found redirection to {http_endpoint}')
 
     try:
       http_response = requests.get(http_endpoint)
@@ -45,7 +45,7 @@ def main():
     except Exception as e:
       log_error(f'Some Exception Occured: {e}')
 
-    logging.info(f'Received response from {query}')
+    log_info(f'Received response from {query}')
   except Exception as e:
     log_error('Some Exception Occured: {e}')
 
