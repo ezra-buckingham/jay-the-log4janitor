@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import requests
 import argparse
 import logging
@@ -11,7 +13,7 @@ def main():
   timestamp = calendar.timegm(gmt)
   
   parser = argparse.ArgumentParser(description='')
-  parser.add_argument('-q', '--query', dest='query',help='Full LDAP query to get payload back from \n ex) "ldap://3.144.191.136:1389/#log4j"')
+  parser.add_argument('-q', '--query', dest='query',help='Full LDAP query to get payload back from. Example: "ldap://3.144.191.136:1389/#log4j"')
   parser.add_argument('-l', '--log-file',default=f"log4j_payload_{timestamp}.log",dest='log_file',help='File to write logging out to')
   parser.add_argument('-o', '--output-file',default=f'output_file_{timestamp}.class',dest='output_file',help='File to write malicious class out to')
 
