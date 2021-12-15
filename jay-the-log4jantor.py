@@ -20,7 +20,7 @@ def main():
   args = parser.parse_args()
 
   # Configure the logging
-  logging.basicConfig(filename=args.output_file, level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+  logging.basicConfig(filename=args.log_file, level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
   query = args.query
 
