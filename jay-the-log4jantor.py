@@ -44,8 +44,6 @@ def main():
         log_info(f'Java class succesfully written to {args.output_file}')
     except Exception as e:
       log_error(f'Some Exception Occured: {e}')
-
-    log_info(f'Received response from {query}')
   except Exception as e:
     log_error('Some Exception Occured: {e}')
 
