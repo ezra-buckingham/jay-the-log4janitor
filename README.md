@@ -7,7 +7,7 @@ This tool will take a malicious LDAP query and pull back the malicious Java clas
 The usage of the script is simple...
 
 ```
-usage: jay-the-log4jantor.py [-h] [-q QUERY] [-l LOG_FILE] [-o OUTPUT_FILE]
+usage: jay.py [-h] [-q QUERY] [-l LOG_FILE] [-o OUTPUT_FILE]
 
 optional arguments:
   -h, --help            show this help message and exit
