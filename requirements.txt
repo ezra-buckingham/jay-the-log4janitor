@@ -1,4 +1,3 @@
 python-ldap
 argparse
-calendar
 time
